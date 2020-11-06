@@ -53,9 +53,36 @@ Expect:
 Describe: pizzabuild.prototype
 
 
+Describe: sizeCost
+Test: sizeCost 
+  if (size === "sm") {
+    return cost($10);
+} else if (size === "med") {
+    return cost($15);
+} else if (size === "lg") {
+    return cost ($20);
+} else if (size === "x-lg") {
+    return cost ($25);
+}
+
+Test: meatCost
+  if (meat:checked) {
+    return sizeCost + ($5);
+  } else (no meat) {
+    return sizeCost;
+  }
+
+Test: vegCost
+  if (veg:checked) {
+    return sizeCost + meatCost + ($1)/topping
+  } else (no veg) {
+    return sizeCost + meatCost;
+  }
+
 Describe: dreamPizzaCost
-Code: add(pizzaSize + pizzaChz + pizzaSauce + pizzaMeat + pizzaVeg);
-Expect: return dreamPizzaCost
+Code: add(sizeCost + meatCost + vegCost);
+Expect: dreamPizzaCost(('sm' === $10) + ('chicken' === $5) + ('spinach' $1 + 'garlic' $1)).toEqual($17)
+<!-- sauceCost & cheeseCost is not needed - included in size price>
 
 ## (Optional) Known bugs
 _{I am Danielle's *bug* that needs fixing. I might impact this app by doing xyz. But you can do abc to get around me. Can do future fix me plz!}_

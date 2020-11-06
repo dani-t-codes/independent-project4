@@ -12,7 +12,10 @@ dreamPizza.prototype.buildPizza = function() {
 };
 
 // dreamPizza.prototype.buildCost = function() {
-//   return ;
+//const crust = [];   
+//if (crust) {
+//  let cost = 
+//}
 // };
 //wk 2 lsn 53 insurance quote
 
