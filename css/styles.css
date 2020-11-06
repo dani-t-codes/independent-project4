@@ -7,13 +7,19 @@
   display: block;
 }
 
+h4 {
+  font-family: Piazzolla;
+  letter-spacing:10pt;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
 hr.header {
-  border: 2px solid #A64F03;
+  border: 2px solid #F29829;
 }
 .jumbotron {
   background-color: #700B19;
   height: 250px;
-
 }
 
 body {
@@ -22,4 +28,9 @@ body {
   background-size: cover;
   position: relative;
   background-color: #A64F03;
+  color: #F2F2F2;
+}
+
+#dream-pizza-show {
+  display: none;
 }
