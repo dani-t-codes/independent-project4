@@ -1,34 +1,23 @@
 //Business Logic
-dreamPizza Constructor 
+function dreamPizza(size, crust, sauce, cheese, toppings) {
+  this.size = size;
+  this.crust = crust;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.toppings = toppings;
+} 
 
 pizzabuild.prototype. ();
 
 pizzaCost.prototype. ();
 //wk 2 lsn 53 insurance quote
 
-let pizza1 = {
-  size: "Medium",
-  crust: "Regular",
-  sauce: "Red",
-  cheese: ["mozzarella", "fontina"],
-  toppings: [[pizzaVeg], [pizzaMeat]],
-};
+let pizzaAmerican = new DreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],[[pizzaVeg], [pizzaMeat]],
+)
 
-let pizza2 = {
-  size: "Large",
-  crust: "Regular",
-  sauce: "Pesto",
-  cheese: ["mozzarella", "fontina"],
-  toppings: [[pizzaVeg], [pizzaMeat]], 
-};
+let pizzaItalian = ( "Large", "Regular", "Pesto",["mozzarella", "fontina"], [[pizzaVeg], [pizzaMeat]])
 
-let pizza3 = {
-  size: "Medium",
-  crust: "Gluten Free",
-  sauce: "Garlic-EVOO",
-  cheese: ["vegan mozz"],
-  toppings: [[pizzaVeg], ![pizzaMeat]], 
-};
+let pizzaQueenDiet = ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], [[pizzaVeg], ![pizzaMeat]])
 
 //User Interface
 $(document).ready(function() {
