@@ -7,23 +7,53 @@ function dreamPizza(size, crust, sauce, cheese, toppings) {
   this.toppings = toppings;
 } 
 
+//dream pizza build biz 
 dreamPizza.prototype.buildPizza = function() {
   return this.size + ", " + this.crust + ", " + this.sauce + ", " + this.cheese + ", " + this.toppings;
 };
-
-// dreamPizza.prototype.buildCost = function() {
-//const crust = [];   
-//if (crust) {
-//  let cost = 
-//}
-// };
-//wk 2 lsn 53 insurance quote
 
 let pizzaAmerican = new dreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
 
 let pizzaItalian = new dreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
 
 let pizzaQueenDiet = new dreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
+
+//pizza cost biz
+
+let smSize = { price: $10};
+let medSize = { price: $15};
+let lgSize = { price: $20};
+let xlgSize = { price: $25};
+
+const sizeCost = cost;//selection of one of the above
+
+let regCrust = { name: "Regular", price: $0};
+let gfCrust = { name: "Gluten Free", price: $5};
+
+const crustCost = cost;//selection of one of the above
+
+let pepperoni = { price: $5};
+let chicken = { price: $5};
+let bacon = { price: $5};
+let sausage = { price: $5};
+
+const meatCost = add()//selection of any of the above);
+
+let vegToppings = [];
+let x;
+for (x of vegTopping) {
+  (i = 0, i < length.vegTopping, i = ++)
+  //let (each vegTopping === cost +$1);
+};
+
+const vegCost = add([vegToppings]);
+
+dreamPizza.prototype.buildCost = function() {
+  add(sizeCost + crustCost + meatCost + vegCost);
+};
+//wk 2 lsn 53 insurance quote
+
+
 
 //User Interface
 $(document).ready(function() {
