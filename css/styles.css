@@ -7,12 +7,6 @@
   display: block;
 }
 
-h4 {
-  font-family: Piazzolla;
-  letter-spacing:10pt;
-  text-decoration: underline;
-  padding-bottom: 10px;
-}
 
 hr.header {
   border: 2px solid #F29829;
@@ -22,6 +16,14 @@ hr.header {
   height: 250px;
 }
 
+h4 {
+  font-family: Piazzolla;
+  letter-spacing:10pt;
+  text-decoration: underline;
+  padding-top: 400px;
+  padding-bottom: 10px;
+}
+
 body {
   background-image: url("/images/woodoven-pizza.jpg");
   background-repeat: no-repeat;
@@ -29,6 +31,18 @@ body {
   position: relative;
   background-color: #A64F03;
   color: #F2F2F2;
+  font-family: Piazzolla;
+}
+
+#pizza-builder {
+  padding-top: 30px;
+}
+
+#pizza-builder p {
+  font-size: 20px;
+  padding-top: 15px;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 #dream-pizza-show {
