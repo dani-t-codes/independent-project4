@@ -34,26 +34,28 @@ _jQuery_
 * _Choose your toppings from meat and vegetarian selections._
 * _Submit your pizza selection to generate your pizza cost._
 
-_{Q's to ask in setup: Do person using an app need to run a server? How should they set up my databases? Is there other code this app depends on? Etc.}_
-
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Homepage** | User accesses localhost:5500 | Homepage with user input form |
-| **Program Gathers User Input** | User input: "pizza toppings", "pizza size", "pizza crust style" | Output: "dream pizza" |
+| **Homepage** | User accesses localhost:5500 | Homepage with user pizza input form |
+| **Program Gathers User Pizza Input** | User input: "pizza toppings", "pizza size", "pizza cheese/chz", "pizza sauce", "pizza crust style" | Output: "dream pizza cost" |
 | **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
 | **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
 | **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
 | **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
 
 ### Tests
-Describe:
+Describe: Dream Pizza Constructor
 Test:
 Code:
 Expect:
 
+Describe: dreamPizzaCost
+Code: add(pizzaSize + pizzaChz + pizzaSauce + pizzaToppings);
+Expect: return dreamPizzaCost
+
 ## (Optional) Known bugs
-_{I am Danielle's *bug* that needs fixing. I need resolving. I might impact this app by doing xyz. But you can do abc to get around me. Can do future fix me plz!}_
+_{I am Danielle's *bug* that needs fixing. I might impact this app by doing xyz. But you can do abc to get around me. Can do future fix me plz!}_
 
 ### Legal, or License 
 _MIT_ Copyright (c) 2020 **_Danielle Thompson_**
