@@ -38,8 +38,8 @@ let bacon = 1;
 let sausage = 1;
 
 let meatCost = [];//selection of any of the above);
-  for (let index = 0; index< meatCost.length; index +=1) {
-    (parseInt(meatCost[index]) * 5)
+  for (let i = 0; i< meatCost.length; i +=1) {
+    (parseInt(meatCost[i]) * 5)
   }
 
 let olives  = "1" 
@@ -61,7 +61,7 @@ for (let i = 0; i <= length.vegTopping; i += 1) {
   }
   //let (each vegTopping === cost +$1);
 
-const vegCost = add([vegToppings]);
+const vegCost = []; //add vegToppings
 
 dreamPizza.prototype.buildCost = function() {
   add(sizeCost + crustCost + meatCost + vegCost);

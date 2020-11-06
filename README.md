@@ -37,21 +37,19 @@ _jQuery_
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Homepage** | User accesses localhost:5500 | Homepage with user pizza input form |
-| **Program Gathers User Pizza Input** | User input: "pizza toppings", "pizza size", "pizza cheese/chz", "pizza sauce", "pizza crust style" | Output: "dream pizza cost" |
-| **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
-| **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
-| **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
-| **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
+| **Homepage** | User accesses localhost:5500 | Homepage with user pizza input form ||
+| **Program Builds Pizza from User Input**| User Input: "pizza toppings" "pizza crust" | Output: display of "pizza toppings" + "pizza crust" |
+| **Program Evaluates User Input Values for Cost**| Input: topping1 + topping2 + topping3 | Output: "total of values" |
+| **Program Returns Pizza Build & Cost** | Input: "pizza toppings" "pizza crust" | Output: "here's what's on your pizza" && "here's the cost for said pizza"|
 
 ### Tests
-Describe: dreamPizzaConstructor
-Test:
-Code: dreamPizzaConstructor: key-values
-Expect:
+Describe: dreamPizza
+Test: function dreamPizza()
+Expect: dreamPizza().toInclude(size, crust, sauce, cheese, toppings)
 
-Describe: pizzabuild.prototype
-
+Describe: buildPizza function
+Test: dreamPizza.prototype.buildPizza()
+Expect: dreamPizza.prototype.buildPizza(x size + x crust + x sauce + x cheese + x topping(s))
 
 Describe: sizeCost
 Test: sizeCost 
@@ -62,30 +60,32 @@ Test: sizeCost
 } else if (size === "lg") {
     return cost ($20);
 } else if (size === "x-lg") {
-    return cost ($25);
-}
+    return cost ($25);}
+Expect: sizeCost(med).toEqual($15)
 
-Test: meatCost
-  if (meat:checked) {
-    return sizeCost + ($5);
+Describe: meatCost
+Test:  if (meat:checked) {
+    return ($5);
+    else if (meat1:checked, meat2:checked) {
+      add(costofMeat1, costofMeat2)
   } else (no meat) {
-    return sizeCost;
-  }
+    return $0;}
+Expect: meatCost(chicken, bacon).toEqual($10)
 
-Test: vegCost
-  if (veg:checked) {
-    return sizeCost + meatCost + ($1)/topping
+Describe: vegCost
+Test:  if (veg:checked) {
+    return +($1)/topping
   } else (no veg) {
-    return sizeCost + meatCost;
-  }
+    return $0;}
+Expect: vegCost(spinach, garlic, mushrooms, onion).toEqual($4)
 
 Describe: dreamPizzaCost
-Code: add(sizeCost + meatCost + vegCost);
-Expect: dreamPizzaCost(('sm' === $10) + ('chicken' === $5) + ('spinach' $1 + 'garlic' $1)).toEqual($17)
-<!-- sauceCost & cheeseCost is not needed - included in size price>
+Test: add(sizeCost + meatCost + vegCost);
+Expect: dreamPizzaCost('sm'+ 'chicken' + 'spinach' + 'garlic').toEqual($17)
+<!-- sauceCost & cheeseCost is not needed - included in size price !-->
 
-## (Optional) Known bugs
-_{I am Danielle's *bug* that needs fixing. I might impact this app by doing xyz. But you can do abc to get around me. Can do future fix me plz!}_
+## Known bugs
+_As of 3:40pm 11.6.2020, bugs galore - work in progress._
 
 ### Legal, or License 
 _MIT_ Copyright (c) 2020 **_Danielle Thompson_**
