@@ -7,17 +7,20 @@ function dreamPizza(size, crust, sauce, cheese, toppings) {
   this.toppings = toppings;
 } 
 
-pizzabuild.prototype. ();
+// dreamPizza.prototype.buildPizza = function() {
+//   console.log("Pizza!")
+// };
 
-pizzaCost.prototype. ();
+// dreamPizza.prototype.buildCost = function() {
+//   console.log("Cost $$$")
+// };
 //wk 2 lsn 53 insurance quote
 
-let pizzaAmerican = new DreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],[[pizzaVeg], [pizzaMeat]],
-)
+let pizzaAmerican = new dreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
 
-let pizzaItalian = ( "Large", "Regular", "Pesto",["mozzarella", "fontina"], [[pizzaVeg], [pizzaMeat]])
+let pizzaItalian = new dreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
 
-let pizzaQueenDiet = ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], [[pizzaVeg], ![pizzaMeat]])
+let pizzaQueenDiet = new dreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
 
 //User Interface
 $(document).ready(function() {
