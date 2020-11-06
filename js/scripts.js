@@ -20,24 +20,24 @@ let pizzaQueenDiet = new dreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["v
 
 //pizza cost biz
 
-let smSize = { price: $10};
-let medSize = { price: $15};
-let lgSize = { price: $20};
-let xlgSize = { price: $25};
+let smSize = '10';
+let medSize = '15';
+let lgSize = '20';
+let xlgSize = '25';
 
-const sizeCost = cost;//selection of one of the above
+let sizeCost = [];//selection of one of the above
 
-let regCrust = { name: "Regular", price: $0};
-let gfCrust = { name: "Gluten Free", price: $5};
+let regCrust = '0';
+let gfCrust = '5';
 
-const crustCost = add (regCrust + gfCrust);//selection of one of the above
+let crustCost = [];//selection of one of the above
 
-let pepperoni = { price: $5};
-let chicken = { price: $5};
-let bacon = { price: $5};
-let sausage = { price: $5};
+let pepperoni = '5';
+let chicken = '5';
+let bacon = '5';
+let sausage = '5';
 
-const meatCost = add(pepperoni + chicken + bacon + sausage);//selection of any of the above);
+let meatCost = add(pepperoni + chicken + bacon + sausage);//selection of any of the above);
 
 let olives  = "1" 
 let spinach = "1" 
@@ -73,19 +73,19 @@ $(document).ready(function() {
     event.preventDefault();
     $("#dream-pizza-show").show();
 //    let userResponses = []; // wk 3 lsn 20 end
-    $("input:checkbox[name=pizza-size]:checked").each(function() {
+    $("input:radio[name=pizza-size]:checked").each(function() {
       const pizzaSize = $(this).val();
       $('#pizza-size').append(pizzaSize + "<br>");
 //      userResponses.push(pizzaSize); // wk 3 lsn 20 end
     });
-    $("input:checkbox[name=pizza-crust]:checked").each(function() {
+    $("input:radio[name=pizza-crust]:checked").each(function() {
       const pizzaCrust = $(this).val();
       $('#pizza-crust').append(pizzaCrust + "<br>");
     });
-    $("input:checkbox[name=pizza-cheese]:checked").each(function() {
-      const pizzaCheese = $(this).val();
-      $('#pizza-cheese').append(pizzaCheese + "<br>");
-    });
+    // $("input:checkbox[name=pizza-cheese]:checked").each(function() {
+    //   const pizzaCheese = $(this).val();
+    //   $('#pizza-cheese').append(pizzaCheese + "<br>");
+    // });
     $("input:checkbox[name=pizza-sauce]:checked").each(function() {
       const pizzaSauce = $(this).val();
       $('#pizza-sauce').append(pizzaSauce + "<br>");
