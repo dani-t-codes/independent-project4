@@ -25,19 +25,22 @@ let medSize = '15';
 let lgSize = '20';
 let xlgSize = '25';
 
-let sizeCost = [];//selection of one of the above
+let sizeCost = [];//if/else if selection of one of the above
 
 let regCrust = '0';
 let gfCrust = '5';
 
-let crustCost = [];//selection of one of the above
+let crustCost = [];//if/else selection of one of the above
 
-let pepperoni = '5';
-let chicken = '5';
-let bacon = '5';
-let sausage = '5';
+let pepp = 1;
+let chicken = 1;
+let bacon = 1;
+let sausage = 1;
 
-let meatCost = add(pepperoni + chicken + bacon + sausage);//selection of any of the above);
+let meatCost = [];//selection of any of the above);
+  for (let index = 0; index< meatCost.length; index +=1) {
+    (parseInt(meatCost[index]) * 5)
+  }
 
 let olives  = "1" 
 let spinach = "1" 
@@ -48,7 +51,7 @@ let onion = "1"
 let tomato = "1"
 let basil = "1"
 
-let vegToppings = [];
+let vegToppings = [];//selection of any of the above);
 //vegToppings.push['#pizza-veg'];
 //let x; for (x of vegtopping)
 // OR use vegToppings.map(); 
