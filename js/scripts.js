@@ -30,21 +30,33 @@ const sizeCost = cost;//selection of one of the above
 let regCrust = { name: "Regular", price: $0};
 let gfCrust = { name: "Gluten Free", price: $5};
 
-const crustCost = cost;//selection of one of the above
+const crustCost = add (regCrust + gfCrust);//selection of one of the above
 
 let pepperoni = { price: $5};
 let chicken = { price: $5};
 let bacon = { price: $5};
 let sausage = { price: $5};
 
-const meatCost = add()//selection of any of the above);
+const meatCost = add(pepperoni + chicken + bacon + sausage);//selection of any of the above);
 
-let vegToppings = [];
-let x;
-for (x of vegTopping) {
-  (i = 0, i < length.vegTopping, i = ++)
+let olives  = "1" 
+let spinach = "1" 
+let garlic = "1" 
+let jalapeno = "1" 
+let mushrooms = "1" 
+let onion = "1"
+let tomato = "1"
+let basil = "1"
+
+let vegToppingsArray = [];
+//vegToppings.push['#pizza-veg'];
+//let x; for (x of vegtopping)
+// OR use vegToppings.map(); 
+
+for (let i = 0; i <= length.vegTopping; i = ++) {
+    console.log(i);
+  }
   //let (each vegTopping === cost +$1);
-};
 
 const vegCost = add([vegToppings]);
 
