@@ -45,13 +45,16 @@ _jQuery_
 | **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
 
 ### Tests
-Describe: Dream Pizza Constructor
+Describe: dreamPizzaConstructor
 Test:
-Code:
+Code: dreamPizzaConstructor: key-values
 Expect:
 
+Describe: pizzabuild.prototype
+
+
 Describe: dreamPizzaCost
-Code: add(pizzaSize + pizzaChz + pizzaSauce + pizzaToppings);
+Code: add(pizzaSize + pizzaChz + pizzaSauce + pizzaMeat + pizzaVeg);
 Expect: return dreamPizzaCost
 
 ## (Optional) Known bugs
