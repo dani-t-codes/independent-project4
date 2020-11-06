@@ -7,12 +7,12 @@ function dreamPizza(size, crust, sauce, cheese, toppings) {
   this.toppings = toppings;
 } 
 
-// dreamPizza.prototype.buildPizza = function() {
-//   console.log("Pizza!")
-// };
+dreamPizza.prototype.buildPizza = function() {
+  return this.size + ", " + this.crust + ", " + this.sauce + ", " + this.cheese + ", " + this.toppings;
+};
 
 // dreamPizza.prototype.buildCost = function() {
-//   console.log("Cost $$$")
+//   return ;
 // };
 //wk 2 lsn 53 insurance quote
 
