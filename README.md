@@ -17,21 +17,22 @@ _Javascript_
 _Bootstrap_
 _jQuery_
 
-
 ## Installation requirements
 * _For Mac users, find Terminal in your Finder, and open a new window. Install the package manager, (Homebrew) [https://brew.sh/], on your device by entering this line of code in Terminal: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`._
 * _Once homebrew is installed, install Git, a version control system for code writers, with this line of code `brew install git`._
 
 * _For Windows users, open a new Command Prompt window by typing "Cmd" in your computer's search bar._
-* _Once you have Homebrew &/or Git installed on your computer, go to this (GitHub repository)[https://github.com/dani-t-codes/independent-project2] and clone this application with the following command:`git clone https://github.com/dani-t-codes/independent-project2`._
+* _Once you have Homebrew &/or Git installed on your computer, go to this (GitHub repository)[https://github.com/dani-t-codes/independent-project4] and clone this application with the following command:`git clone https://github.com/dani-t-codes/independent-project4`._
 * _Open the index.html in your web browser of choice, either by double-clicking the file icon inside the project folder, or by opening File>Open File>"index.html" from the independent-project2 folder that you cloned onto your computer._
-* _Read through the index page, and ..._
+* _Read through the home page, and follow the order instructions below._
 
-## Setup Instructions 
-* _List setup instructions_
-* _Clearly & simply here_
-* _So that anyone who uses your app_
-* _Will be able to reproduce the app fxns, etc._
+## Instructions 
+* _Choose your pizza size (sm, med, lg, x-lg)._
+* _Choose your crust type (regular or gluten free)._
+* _Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta)._
+* _Choose your sauce (tomato, white, garlic & olive oil, pesto)._
+* _Choose your toppings from meat and vegetarian selections._
+* _Submit your pizza selection to generate your pizza cost._
 
 _{Q's to ask in setup: Do person using an app need to run a server? How should they set up my databases? Is there other code this app depends on? Etc.}_
 
