@@ -48,13 +48,13 @@ let onion = "1"
 let tomato = "1"
 let basil = "1"
 
-let vegToppingsArray = [];
+let vegToppings = [];
 //vegToppings.push['#pizza-veg'];
 //let x; for (x of vegtopping)
 // OR use vegToppings.map(); 
 
-for (let i = 0; i <= length.vegTopping; i = ++) {
-    console.log(i);
+for (let i = 0; i <= length.vegTopping; i += 1) {
+    vegToppings.push(fixToppingsHere[index]);
   }
   //let (each vegTopping === cost +$1);
 
