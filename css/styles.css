@@ -1,3 +1,19 @@
-h3 {
+h1 {
   font-family: Piazzolla;
+  color: #F2F2F2;
+  letter-spacing: 15pt;
+  font-size: 50pt;
+  text-align: center;
+}
+
+hr.header {
+  border: 2px solid #A64F03;
+}
+.jumbotron {
+  background-color: #700B19;
+}
+
+body {
+  background-image: url("/images/woodoven-pizza.jpg");
+  background-color: #700B19;
 }

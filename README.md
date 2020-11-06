@@ -9,6 +9,9 @@ _Love pizza? So do I! Use this website to build your dream (virtual) pizza and g
 
 _This independent project during week 4 of Epicodus is an exercise in object-oriented Javascript, test-driven development, and ensuring at least a minimum viable project is in place._
 
+## Color Theme
+_{#F29829}, {#A64F03}, {#700B19}, {#401A0C}, {#F2F2F2}._
+
 ## Technologies used
 _Javascript_
 _Bootstrap_
