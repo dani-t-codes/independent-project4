@@ -15,15 +15,17 @@
       <hr class ="header">
     </div>
     <div class="container">
-      <h4>ORDER INSTRUCTIONS</h4>
-      <ol> 
-        <li>Choose your pizza size (sm, med, lg, x-lg).</li>
-        <li>Choose your crust type (regular or gluten free).</li>
-        <li>Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta).</li>
-        <li>Choose your sauce (tomato, white, garlic & olive oil, pesto).</li>
-        <li>Choose your toppings from meat and vegetarian selections.</li>
-        <li>Submit your pizza selection to generate your pizza cost.</li>
-      </ol>
+      <div id="order-instructions">
+        <h4>ORDER INSTRUCTIONS</h4>
+        <ol> 
+          <li>Choose your pizza size (sm, med, lg, x-lg).</li>
+          <li>Choose your crust type (regular or gluten free).</li>
+          <li>Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta).</li>
+          <li>Choose your sauce (tomato, white, garlic & olive oil, pesto).</li>
+          <li>Choose your toppings from meat and vegetarian selections.</li>
+          <li>Submit your pizza selection to generate your pizza cost.</li>
+        </ol>
+      </div>
       <form id="pizza-builder">
         <div class="form-group">
           <p>SELECT YOUR PIZZA SIZE:</p>
@@ -31,23 +33,27 @@
           <input type="checkbox" name="pizza-size" value="med"> Medium (8 slices).<br>
           <input type="checkbox" name="pizza-size" value="lg"> Large (10 slices).<br>
           <input type="checkbox" name="pizza-size" value="x-lg"> X-large (12 slices).<br>
-
+        </div>
+        <div class="form-group">
           <p>SELECT YOUR PIZZA CRUST:</p>
           <input type="checkbox" name="pizza-crust" value="reg"> Regular crust.<br>
           <input type="checkbox" name="pizza-crust" value="gf"> Gluten free (+$5).<br>
-
+        </div>
+        <div class="form-group">
           <p>SELECT YOUR PIZZA SAUCE:</p>
           <input type="checkbox" name="pizza-sauce" value="red"> Roasted marinara.<br>
           <input type="checkbox" name="pizza-sauce" value="white"> White.<br>
           <input type="checkbox" name="pizza-sauce" value="gar-evoo"> Garlic-olive oil.<br>
           <input type="checkbox" name="pizza-sauce" value="pesto"> Pesto.<br>
-
+        </div>
+        <div class="form-group">
           <p>SELECT YOUR MEAT ( optional ) :</p>
           <input type="checkbox" name="pizza-meat" value="pepperoni"> Olympia Provisions Pepperoni.<br>
           <input type="checkbox" name="pizza-meat" value="chicken"> Thyme-rub chicken.<br>
           <input type="checkbox" name="pizza-meat" value="sausage"> Fennel-sausage.<br>
           <input type="checkbox" name="pizza-meat" value="bacon"> Revel Meat Co. Bacon.<br>
-        
+        </div>
+        <div class="form-group">
           <p>SELECT YOUR TOPPINGS:</p>
           <input type="checkbox" name="pizza-veg" value="olives"> Olives.<br>
           <input type="checkbox" name="pizza-veg" value="spinach"> Spinach.<br>
@@ -65,6 +71,11 @@
     </div>
     <span id="dream-pizza-show">
       <p><b>Your dream pizza inludes:</b></p>
+        <span id="pizza-size"></span>
+        <span id="pizza-crust"></span>
+        <span id="pizza-sauce"></span>
+        <span id="pizza-meat"></span>
+        <span id="pizza-veg"></span>
       <p><b>Your dream pizza cost will be:</b></p>
     </span>
   </div>
