@@ -24,11 +24,26 @@ let lgSize = '20';
 let xlgSize = '25';
 
 let sizeCost = [];//if/else if selection of one of the above
+if (size === smSize) {
+  cost += 10;
+} else if (size === medSize) {
+  cost += 15;
+} else if (size === lgSize) {
+  cost += 20;
+} else if (size === xlgSize) {
+  cost +=25
+}
+
 
 let regCrust = '0';
 let gfCrust = '5';
 
 let crustCost = [];//if/else selection of one of the above
+if (crust === regCrust) {
+  cost += 0;
+} else (crust === gfCrust) {
+  cost =+ 5;
+}
 
 let pepp = 1;
 let chicken = 1;
