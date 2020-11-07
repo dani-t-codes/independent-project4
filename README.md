@@ -1,4 +1,4 @@
-# Pizza Parlor
+# Dream Pizza
 
 #### Create Your Own Pizza, Epicodus Independent Project, Week 4, Object-Oriented Javascript, 11.6.2020
 
