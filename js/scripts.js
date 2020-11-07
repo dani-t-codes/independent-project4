@@ -1,49 +1,62 @@
-//Business Logic
-function dreamPizza(size, crust, sauce, cheese, toppings) {
-  this.size = size;
-  this.crust = crust;
-  this.sauce = sauce;
-  this.cheese = cheese;
-  this.toppings = toppings;
+//dream pizza build biz
+function DreamPizza() {
+  this.pizza = [];
 } 
 
-//dream pizza build biz 
-dreamPizza.prototype.buildPizza = function() {
+DreamPizza.prototype.buildPizza = function(size, crust, sauce, cheese, toppings) {
+  this.size.push(pizza);
+  this.crust.push(pizza);
+  this.sauce.push(pizza);
+  this.cheese.push(pizza);
+  this.toppings.push(pizza);
   return this.size + ", " + this.crust + ", " + this.sauce + ", " + this.cheese + ", " + this.toppings;
 };
 
-let pizzaAmerican = new dreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
-let pizzaItalian = new dreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
-let pizzaQueenDiet = new dreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
+let pizzaAmerican = new DreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
+let pizzaItalian = new DreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
+let pizzaQueenDiet = new DreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
 
 //pizza cost biz
-
 let smSize = '10';
 let medSize = '15';
 let lgSize = '20';
 let xlgSize = '25';
 
 let sizeCost = [];//if/else if selection of one of the above
-if (size === smSize) {
-  cost += 10;
-} else if (size === medSize) {
-  cost += 15;
-} else if (size === lgSize) {
-  cost += 20;
-} else if (size === xlgSize) {
-  cost +=25
+function SizeResult(smSize, medSize, lgSize, xlgSize) {
+  this.smSize = smSize;
+  this.medSize = medSize;
+  this.lgSize = lgSize;
+  this.xlgSize = xlgSize;
 }
 
+//to UI
+  // if (size === smSize) {
+  //   cost += 10;
+  // } else if (size === medSize) {
+  //   cost += 15;
+  // } else if (size === lgSize) {
+  //   cost += 20;
+  // } else if (size === xlgSize) {
+  //   cost +=25;
+  // }
 
 let regCrust = '0';
 let gfCrust = '5';
 
 let crustCost = [];//if/else selection of one of the above
-if (crust === regCrust) {
-  cost += 0;
-} else (crust === gfCrust) {
-  cost =+ 5;
+
+function CrustResult (regCrust, gfCrust) {
+  this.regCrust = regCrust;
+  this.gfCrust = gfCrust;
 }
+//to UI
+// if (crust === regCrust) {
+//   cost += 0;
+// } else (crust === gfCrust) {
+//   cost =+ 5;
+// }
+
 
 let pepp = 1;
 let chicken = 1;
@@ -74,7 +87,7 @@ for (let i = 0; i <= length.vegCost; i += 1) {
   }
   //let (each vegTopping === cost +$1);
 
-dreamPizza.prototype.buildCost = function() {
+DreamPizza.prototype.buildCost = function() {
   add(sizeCost + crustCost + meatCost + vegCost);
 };
 //wk 2 lsn 53 insurance quote
