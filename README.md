@@ -5,7 +5,7 @@
 #### By Danielle Thompson
 
 ## Description
-_Love pizza? So do I! Use this website to build your dream (virtual) pizza and get that mouth salivating. Gluten free? Don't worry - we have (virtual) GF crust! Choose your pizza size and individual toppings to see how much the pizza of your dreams will cost._
+_Love pizza? So do I! Use this website to build your dream (virtual) pizza and get that mouth salivating in the process. Gluten free? Vegan? Don't worry - we have (virtual) items that will meet all your dietary needs! Choose your pizza size and individual toppings to see how much the pizza of your dreams will cost._
 
 _This independent project during week 4 of Epicodus is an exercise in object-oriented Javascript, test-driven development, and ensuring at least a minimum viable project is in place._
 
@@ -32,7 +32,7 @@ _jQuery_
 * _Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta)._
 * _Choose your sauce (tomato, white, garlic & olive oil, pesto)._
 * _Choose your toppings from meat and vegetarian selections._
-* _Submit your pizza selection to generate your pizza cost._
+* _Submit your pizza selection to generate your pizza build & cost._
 
 ### Specs
 | Spec | Input | Output |
@@ -40,7 +40,7 @@ _jQuery_
 | **Homepage** | User accesses localhost:5500 | Homepage with user pizza input form ||
 | **Program Builds Pizza from User Input**| User Input: "pizza toppings" "pizza crust" | Output: display of "pizza toppings" + "pizza crust" |
 | **Program Evaluates User Input Values for Cost**| Input: topping1 + topping2 + topping3 | Output: "total of values" |
-| **Program Returns Pizza Build & Cost** | Input: "pizza toppings" "pizza crust" | Output: "here's what's on your pizza" && "here's the cost for said pizza"|
+| **Program Returns Pizza Build & Cost** | Input: "pizza toppings" "pizza crust" | Output: "here's what's on your pizza" && "here's the cost for your pizza"|
 
 ### Tests
 Describe: dreamPizza
@@ -79,7 +79,7 @@ Test:  if (veg:checked) {
     return $0;}
 Expect: vegCost(spinach, garlic, mushrooms, onion).toEqual($4)
 
-Describe: dreamPizzaCost
+Describe: dreamPizzaCost function
 Test: add(sizeCost + meatCost + vegCost);
 Expect: dreamPizzaCost('sm'+ 'chicken' + 'spinach' + 'garlic').toEqual($17)
 <!-- sauceCost & cheeseCost is not needed - included in size price !-->

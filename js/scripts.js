@@ -13,9 +13,7 @@ dreamPizza.prototype.buildPizza = function() {
 };
 
 let pizzaAmerican = new dreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
-
 let pizzaItalian = new dreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
-
 let pizzaQueenDiet = new dreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
 
 //pizza cost biz
@@ -51,17 +49,15 @@ let onion = "1"
 let tomato = "1"
 let basil = "1"
 
-let vegToppings = [];//selection of any of the above);
+let vegCost = [];//selection of any of the above);
 //vegToppings.push['#pizza-veg'];
 //let x; for (x of vegtopping)
 // OR use vegToppings.map(); 
 
-for (let i = 0; i <= length.vegTopping; i += 1) {
-    vegToppings.push(fixToppingsHere[index]);
+for (let i = 0; i <= length.vegCost; i += 1) {
+    vegCost.push(vegCost[i]);
   }
   //let (each vegTopping === cost +$1);
-
-const vegCost = []; //add vegToppings
 
 dreamPizza.prototype.buildCost = function() {
   add(sizeCost + crustCost + meatCost + vegCost);
