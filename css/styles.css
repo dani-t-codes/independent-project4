@@ -34,6 +34,13 @@ body {
   font-family: Piazzolla;
 }
 
+#build, #try-again {
+  background-color: #700B19;
+  color: #F2F2F2;
+  font-style: bold;
+  letter-spacing: 1px;
+}
+
 #pizza-builder {
   padding-top: 30px;
 }
