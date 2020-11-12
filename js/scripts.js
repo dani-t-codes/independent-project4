@@ -1,22 +1,30 @@
-//dream pizza build biz
+//Business Logic for DreamPizza ------------
 function DreamPizza() {
   this.pizza = [];
-} 
+}; 
 
-DreamPizza.prototype.buildPizza = function(size, crust, sauce, cheese, toppings) {
-  this.size.push(pizza);
-  this.crust.push(pizza);
-  this.sauce.push(pizza);
-  this.cheese.push(pizza);
-  this.toppings.push(pizza);
-  return this.size + ", " + this.crust + ", " + this.sauce + ", " + this.cheese + ", " + this.toppings;
+DreamPizza.prototype.addPizza = function(pizza) {
+  this.pizza.push(pizza)
+}
+
+//Business Logic for UserDreamPizza ------------
+function UserDreamPizza(size, crust, sauce, cheese, toppings) {
+  this.size = size;
+  this.crust = crust;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.toppings= toppings;
 };
 
-let pizzaAmerican = new DreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
-let pizzaItalian = new DreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
-let pizzaQueenDiet = new DreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
+UserDreamPizza.prototype.buildPizza = function() {
+  return this.size + " with " + this.crust + "crust, " + this.sauce + "sauce, " + this.cheese + ", and " + this.toppings;
+}
 
-//pizza cost biz
+let pizzaAmerican = new UserDreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
+let pizzaItalian = new UserDreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
+let pizzaQueenDiet = new UserDreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
+
+//Pizza Cost Business Logic ------------
 let smSize = '10';
 let medSize = '15';
 let lgSize = '20';
@@ -30,7 +38,6 @@ function SizeResult(smSize, medSize, lgSize, xlgSize) {
   this.xlgSize = xlgSize;
 }
 
-//to UI
   // if (size === smSize) {
   //   cost += 10;
   // } else if (size === medSize) {
@@ -56,7 +63,6 @@ function CrustResult (regCrust, gfCrust) {
 // } else (crust === gfCrust) {
 //   cost =+ 5;
 // }
-
 
 let pepp = 1;
 let chicken = 1;
@@ -93,8 +99,7 @@ DreamPizza.prototype.buildCost = function() {
 //wk 2 lsn 53 insurance quote
 
 
-
-//User Interface
+//User Interface ------------
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
