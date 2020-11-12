@@ -25,7 +25,6 @@ let pizzaItalian = new UserDreamPizza ("Large", "Regular", "Pesto", ["mozzarella
 let pizzaQueenDiet = new UserDreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
 
 //Pizza Cost Business Logic ------------
-
 function BuildCost() {
   let totalPizzaCost = [];
 }
@@ -39,15 +38,16 @@ function SizeResult() { // does this need to incl. ea size?
 
 DreamPizza.prototype.sizeCost = function(size) {
   for (let i=0; i< this.size.length; i++)
-    if (size === Small) {
-      push.totalPizzaCost += 10;
-    } else if (size === Medium) {
-      push.totalPizzaCost += 15;
-    } else if (size === Large) {
-      push.totalPizzaCost += 20;
-    } else if (size === X-large) {
-      push.totalPizzaCost += 25;
-    }
+    if (this.size === Small) {
+      this.totalPizzaCost.push[10];
+    } else if (this.size === Medium) {
+      this.totalPizzaCost.push[15];
+    } else if (this.size === Large) {
+      this.totalPizzaCost.push[20];
+    } else if (this.size === X-large) {
+      this.totalPizzaCost.push[25];
+    };
+    return false;
 };
 
 let regCrust = '0';
