@@ -132,7 +132,7 @@ $(document).ready(function() {
     const inputtedToppings = $("input:checkbox[name=pizza-veg]:checked#pizza-toppings").val();
     let newDreamPizza = new UserDreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedCheese, inputtedToppings)
     userDreamPizza.buildPizza(newDreamPizza);
-    console.log(userDreamPizza.pizza)
+    console.log(userDreamPizza.buildPizza(newDreamPizza))
     $("#dream-pizza-show").show();
 //    let userResponses = []; // wk 3 lsn 20 end
 //     $("input:radio[name=pizza-size]:checked").each(function() {
