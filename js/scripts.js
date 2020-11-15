@@ -1,124 +1,33 @@
 //Business Logic for DreamPizza ------------
-function DreamPizza() {
-  this.pizza = [];
-}; 
-
-DreamPizza.prototype.addPizza = function(pizza) {
-  this.pizza.push(pizza);
-}
-DreamPizza.prototype.buildCost = function() {
-  this.cost;
-}
-
-DreamPizza.prototype.buildPizza = function() {
-  this.size + " pizza with " + this.crust + " crust, " + this.sauce + " sauce, " + this.cheese + ", and " + this.toppings;
-}
-
-//Business Logic for User Pizzas ------------
-function UserDreamPizza(size, crust, sauce, cheese, toppings, cost) {
+function DreamPizza(size, crust, sauce, cheese, toppings, totalCost) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
   this.toppings = toppings;
-  this.cost = cost;
+  this.totalCost = totalCost;
+  };
+
+DreamPizza.prototype.Cost = function() {
+    if (this.size === small) {
+    this.totalCost += 10;
+  } else if (this.size === medium) {
+    this.totalCost += 15;
+  } else if (this.size === large) {
+    this.totalCost += 20;
+  } else if (this.size === xLarge) {
+    this.totalCost += 25;
+  }
 };
 
-
-//Business Logic for Pizza Cost ------------
-//take out
-// function Cost(size) { 
-//   this.size = size;
-// }
-
-
-//UserDreamPizza Testing Objects
-// let pizzaAmerican = new UserDreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
-// let pizzaItalian = new UserDreamPizza ("Large", "Regular", "Pesto", ["mozzarella", "fontina"], ["toppings"])
-// let pizzaQueenDiet = new UserDreamPizza ("Medium", "Gluten Free", "Garlic-EVOO", ["vegan mozz"], ["vegetarian toppings"])
-
-//Stretch Goal - More complex cost function
-// BuildCost.prototype.addCost = function() {
-//   return parseInt(this.sizeCost + this.crustCost + this.meatCost + this.vegCost);
-// }
-
-// let small = { cost: "10"};
-// let medium = { cost:  "15"};
-// let large = { cost: "20"};
-// let xLarge = { cost: "25"};
-
-// for (let i=0; i< this.size.length; i++) {
-//   if (this.size === small) {
-//     this.totalPizzaCost.push[10];
-//   } else if (this.size === medium) {
-//     this.totalPizzaCost.push[15];
-//   } else if (this.size === large) {
-//     this.totalPizzaCost.push[20];
-//   } else if (this.size === xLarge) {
-//     this.totalPizzaCost.push[25];
-//   }
-// };
-
-//Cost of Reg. Crust = '0';
-//Cost of GF Crust = '5';
-// BuildCost.prototype.CrustResult = function(crust) {
-//   this.crust = crust;
-// }
-
-// BuildCost.prototype.CrustCost = function(crust) {
-//   for (let i=0; i< this.crust.length; i++) {
-//     if (this.crust === regCrust) {
-//       this.totalPizzaCost.push[0];
-//     } else if (this.crust === gfCrust) {
-//       this.totalPizzaCost.push[5];
-//     }
-//   };
-// }
-
-// // function setCheckboxValue(checkbox,value) {
-// //   if (checkbox.checked!=value)
-// //       checkbox.click();
-
-// let pepp = 1;
-// let chicken = 1;
-// let bacon = 1;
-// let sausage = 1;
-
-// let meatCost = [];//selection of any of the above);
-//   for (let i = 0; i< meatCost.length; i +=1) {
-//     (parseInt(meatCost[i]) * 5)
-//   }
-
-// let olives  = "1" 
-// let spinach = "1" 
-// let garlic = "1" 
-// let jalapeno = "1" 
-// let mushrooms = "1" 
-// let onion = "1"
-// let tomato = "1"
-// let basil = "1"
-
-// let vegCost = [];//selection of any of the above);
-// //vegToppings.push['#pizza-veg'];
-// //let x; for (x of vegtopping)
-// // OR use vegToppings.map(); 
-
-// for (let i = 0; i <= length.vegCost; i += 1) {
-//     vegCost.push(vegCost[i]);
-//   }
-//   //let (each vegTopping === cost +$1);
-
-// DreamPizza.prototype.buildCost = function() {
-//   add(sizeCost + crustCost + meatCost + vegCost);
-// };
-// //wk 2 lsn 53 insurance quote
-
-
-//User Interface ------------
 function displayPizzaDetails(userDreamPizzaToDisplay) {
+  this.size + " pizza with " + this.crust + " crust, " + this.sauce + " sauce, " + this.cheese + ", and " + this.toppings;
 }
 function displayPizzaDetails(buildCost) {
-}
+  this.size + this.crust +(add(this.toppings));
+};
+
+//User Interface ------------
 
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
@@ -128,12 +37,13 @@ $(document).ready(function() {
     const inputtedSauce = $("input:radio[name=pizza-sauce]:checked").val();
     const inputtedCheese = $("input:checkbox[name=pizza-meat]:checked").val();
     const inputtedToppings = $("input:checkbox[name=pizza-veg]:checked").val();
+    const totalCost = inputtedSize + inputtedCrust + inputtedToppings;
     let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedCheese, inputtedToppings);
-    //let newCost = new Cost(inputtedSize);
-    newDreamPizza.buildPizza();
-    //newCost.buildCost();
+    let userCost = new Cost(inputtedSize);  //this was from Brooke mtg
+    newDreamPizza.displayPizzaDetails(newDreamPizza);
+    userCost.Cost(totalCost);    //this was from Brooke mtg
     console.log(newDreamPizza.buildPizza());
-    console.log(buildCost.newCost);
+    console.log(userCost.Cost);
     $("#dream-pizza-show").show();
     $('#pizza-builder').hide();
     $('#order-instructions').hide();
