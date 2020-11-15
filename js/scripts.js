@@ -1,38 +1,36 @@
 //Business Logic for DreamPizza ------------
 function DreamPizza() {
   this.pizza = [];
-  this.cost = [];
 }; 
 
 DreamPizza.prototype.addPizza = function(pizza) {
   this.pizza.push(pizza);
 }
+DreamPizza.prototype.buildCost = function() {
+  this.cost;
+}
 
-DreamPizza.prototype.pizzaCost = function(cost) {
-  this.cost.push(cost);
+DreamPizza.prototype.buildPizza = function() {
+  this.size + " pizza with " + this.crust + " crust, " + this.sauce + " sauce, " + this.cheese + ", and " + this.toppings;
 }
 
 //Business Logic for User Pizzas ------------
-function UserDreamPizza(size, crust, sauce, cheese, toppings) {
+function UserDreamPizza(size, crust, sauce, cheese, toppings, cost) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  this.toppings= toppings;
+  this.toppings = toppings;
+  this.cost = cost;
 };
 
-UserDreamPizza.prototype.buildPizza = function() {
-  return this.size + " pizza with " + this.crust + " crust, " + this.sauce + " sauce, " + this.cheese + ", and " + this.toppings;
-}
 
 //Business Logic for Pizza Cost ------------
-function Cost(size) { 
-  this.size = size;
-}
+//take out
+// function Cost(size) { 
+//   this.size = size;
+// }
 
-UserDreamPizza.prototype.buildCost = function() {
-  return "A" + this.size + " pizza is" + "DOLLARS.";
-}
 
 //UserDreamPizza Testing Objects
 // let pizzaAmerican = new UserDreamPizza ("Medium", "Regular", "Red", ["mozzarella", "fontina"],["toppings"],)
@@ -49,19 +47,17 @@ UserDreamPizza.prototype.buildCost = function() {
 // let large = { cost: "20"};
 // let xLarge = { cost: "25"};
 
-
-//To UI (?)
-    // for (let i=0; i< this.size.length; i++) {
-    //   if (this.size === small) {
-    //     this.totalPizzaCost.push[10];
-    //   } else if (this.size === medium) {
-    //     this.totalPizzaCost.push[15];
-    //   } else if (this.size === large) {
-    //     this.totalPizzaCost.push[20];
-    //   } else if (this.size === xLarge) {
-    //     this.totalPizzaCost.push[25];
-    //   }
-    // };
+// for (let i=0; i< this.size.length; i++) {
+//   if (this.size === small) {
+//     this.totalPizzaCost.push[10];
+//   } else if (this.size === medium) {
+//     this.totalPizzaCost.push[15];
+//   } else if (this.size === large) {
+//     this.totalPizzaCost.push[20];
+//   } else if (this.size === xLarge) {
+//     this.totalPizzaCost.push[25];
+//   }
+// };
 
 //Cost of Reg. Crust = '0';
 //Cost of GF Crust = '5';
@@ -119,47 +115,26 @@ UserDreamPizza.prototype.buildCost = function() {
 
 
 //User Interface ------------
-let buildCost = new Cost();
-let userDreamPizza = new UserDreamPizza(); 
+function displayPizzaDetails(userDreamPizzaToDisplay) {
+}
+function displayPizzaDetails(buildCost) {
+}
 
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
-    const inputtedSize = $("input:radio[name=pizza-size]:checked#pizza-size").val();
-    const inputtedCrust = $("input:radio[name=pizza-crust]:checked#pizza-crust").val();
-    const inputtedSauce = $("input:checkbox[name=pizza-sauce]:checked#pizza-sauce").val();
-    const inputtedCheese = $("input:checkbox[name=pizza-meat]:checked#pizza-meat").val();
-    const inputtedToppings = $("input:checkbox[name=pizza-veg]:checked#pizza-toppings").val();
-    let newDreamPizza = new UserDreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedCheese, inputtedToppings)
-    userDreamPizza.buildPizza(newDreamPizza);
-    console.log(userDreamPizza.buildPizza(newDreamPizza))
+    const inputtedSize = $("input:radio[name=pizza-size]:checked").val();
+    const inputtedCrust = $("input:radio[name=pizza-crust]:checked").val();
+    const inputtedSauce = $("input:radio[name=pizza-sauce]:checked").val();
+    const inputtedCheese = $("input:checkbox[name=pizza-meat]:checked").val();
+    const inputtedToppings = $("input:checkbox[name=pizza-veg]:checked").val();
+    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedCheese, inputtedToppings);
+    //let newCost = new Cost(inputtedSize);
+    newDreamPizza.buildPizza();
+    //newCost.buildCost();
+    console.log(newDreamPizza.buildPizza());
+    console.log(buildCost.newCost);
     $("#dream-pizza-show").show();
-//    let userResponses = []; // wk 3 lsn 20 end
-//     $("input:radio[name=pizza-size]:checked").each(function() {
-//       const pizzaSize = $(this).val();
-//       $('#pizza-size').append(pizzaSize + "<br>");
-// //      userResponses.push(pizzaSize); // wk 3 lsn 20 end
-//     });
-//     $("input:radio[name=pizza-crust]:checked").each(function() {
-//       const pizzaCrust = $(this).val();
-//       $('#pizza-crust').append(pizzaCrust + "<br>");
-//     });
-//     // $("input:checkbox[name=pizza-cheese]:checked").each(function() {
-//     //   const pizzaCheese = $(this).val();
-//     //   $('#pizza-cheese').append(pizzaCheese + "<br>");
-//     // });
-//     $("input:checkbox[name=pizza-sauce]:checked").each(function() {
-//       const pizzaSauce = $(this).val();
-//       $('input#pizza-sauce').append(pizzaSauce + "<br>");
-//     });
-//     $("input:checkbox[name=pizza-meat]:checked").each(function() {
-//       const pizzaMeat = $(this).val();
-//       $('#pizza-meat').append(pizzaMeat + "<br>");
-//     });
-//     $("input:checkbox[name=pizza-veg]:checked").each(function() {
-//       const pizzaVeg = $(this).val();
-//       $('#pizza-veg').append(pizzaVeg + "<br>");
-//     });
     $('#pizza-builder').hide();
     $('#order-instructions').hide();
 
@@ -168,8 +143,5 @@ $(document).ready(function() {
       window.location.reload();
     });
   });
-  //User Interface for Build Cost 
-
-
 
 }); // closing bracket for original doc.ready(fxn)
