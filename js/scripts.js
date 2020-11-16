@@ -28,11 +28,11 @@ DreamPizza.prototype.addOnGFCost = function() {
   return this.totalCost;
 }
 
-
 DreamPizza.prototype.addOnToppingsCost = function() {
   let toppings = [];
-  this.toppings.forEach.push(toppings);
+  this.toppings.push(toppings);
   this.totalCost += parseInt(this.toppings.length);
+  return this.totalCost;
 };
 
 // inputtedSize + inputtedCrust + inputtedMeat.length + inputtedVeg.length;
