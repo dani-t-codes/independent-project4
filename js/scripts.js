@@ -1,9 +1,10 @@
 //Business Logic for DreamPizza ------------
-function DreamPizza(size, crust, sauce, toppings, totalCost) {
+function DreamPizza(size, crust, sauce, meatToppings, vegToppings, totalCost) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
-  this.toppings = toppings;
+  this.meatToppings = meatToppings;
+  this.vegToppings = vegToppings;
   this.totalCost = totalCost += 10;
 }
 //add todisplay fxn? see lsn 17 e.g.
@@ -24,12 +25,19 @@ DreamPizza.prototype.addOnGFCost = function() {
     this.totalCost += 5;
   };
   return this.totalCost;
-}
+};
 
-DreamPizza.prototype.addOnToppingsCost = function() {
-  let toppings = [];
-  this.toppings.push(toppings);
-  this.totalCost += parseInt(this.toppings.length);
+DreamPizza.prototype.addOnMeatToppingsCost = function() {
+  let meatToppings = [];
+  this.meatToppings.push(meatToppings);
+  this.totalCost += parseInt((this.meatToppings.length - 1) * 5);
+  return this.totalCost;
+};
+
+DreamPizza.prototype.addOnVegToppingsCost = function() {
+  let vegToppings = [];
+  this.vegToppings.push(vegToppings);
+  this.totalCost += parseInt(this.vegToppings.length - 1);
   return this.totalCost;
 };
 
@@ -58,8 +66,7 @@ $(document).ready(function() {
     const inputtedSauce = $("input:radio[name='pizza-sauce']:checked").attr("id");
     const inputtedMeat = $("input:checkbox[name='pizza-meat']:checked").attr("id");
     const inputtedVeg = $("input:checkbox[name='pizza-veg']:checked").attr("id");
-    const totalCost = 0;
-    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg);
+    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg, this.totalCost);
     console.log(newDreamPizza);
     // $("#pizza-build").append(newDreamPizza);
 
