@@ -1,54 +1,80 @@
 //Business Logic for DreamPizza ------------
-function DreamPizza(size, crust, sauce, cheese, toppings, totalCost) {
+function DreamPizza(size, crust, sauce, toppings, totalCost) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
-  this.cheese = cheese;
   this.toppings = toppings;
-  this.totalCost = totalCost;
-  };
-
-DreamPizza.prototype.Cost = function() {
-    if (this.size === small) {
-    this.totalCost += 10;
-  } else if (this.size === medium) {
-    this.totalCost += 15;
-  } else if (this.size === large) {
-    this.totalCost += 20;
-  } else if (this.size === xLarge) {
-    this.totalCost += 25;
-  }
-};
-
-function displayPizzaDetails(userDreamPizzaToDisplay) {
-  this.size + " pizza with " + this.crust + " crust, " + this.sauce + " sauce, " + this.cheese + ", and " + this.toppings;
+  this.totalCost = totalCost += 10;
+  //should I set original value to 0 then construct w/ .Cost fxn? 
+  //^ yes, see lsn 9
 }
-function displayPizzaDetails(buildCost) {
-  this.size + this.crust +(add(this.toppings));
+//add todisplay fxn? see lsn 17 e.g.
+
+DreamPizza.prototype.sizeCost = function() {
+  //I think I need to set .Cost fxn to *update* totalCost key in DP
+  if (this.size === 'Medium') {
+    this.totalCost += 5;
+  } else if (this.size === 'Large') {
+    this.totalCost += 10;
+  } else if (this.size === 'X-Large') {
+    this.totalCost += 15;
+  }
+  return this.totalCost;
 };
+//above & below - do === variables need to be "strings" or naw??
+DreamPizza.prototype.addOnGFCost = function() {
+  if (this.crust === 'Gluten-Free') {
+    this.totalCost += 5;
+  } else if (this.crust === 'Regular') {
+    this.totalCost;
+  }
+  return this.totalCost;
+};
+
+DreamPizza.prototype.addOnToppingsCost = function() {
+  let toppings = [];
+  this.toppings.forEach.push(toppings);
+  this.totalCost += this.toppings.length;
+};
+
+// inputtedSize + inputtedCrust + inputtedMeat.length + inputtedVeg.length;
+//**Need a connector for three cost prototypes**//
 
 //User Interface ------------
+function displayPizzaDetails(displayUserDreamPizza) {
+  let userDreamPizza = $("TODO");
+  let htmlForPizzaDeets = '';
+  displayPizzaDetails.forEach(function(userDreamPizza) {
+    userDreamPizza.concat(userDreamPizza.size + " pizza with " + DreamPizza.crust + " crust, " + DreamPizza.sauce + " sauce, " + DreamPizza.cheese + ", and " + DreamPizza.toppings); //lsn23 cheat sheet
+  });
+  userDreamPizza.html(htmlForPizzaDeets);
+}
+
+function displayCostDetails(buildCost) { //belows probs not right
+  buildCost.html(this.totalCost.sizeCost.addOnGFCost.addOnToppingsCost.length);
+}
 
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
-    const inputtedSize = $("input:radio[name=pizza-size]:checked").val();
-    const inputtedCrust = $("input:radio[name=pizza-crust]:checked").val();
-    const inputtedSauce = $("input:radio[name=pizza-sauce]:checked").val();
-    const inputtedCheese = $("input:checkbox[name=pizza-meat]:checked").val();
-    const inputtedToppings = $("input:checkbox[name=pizza-veg]:checked").val();
-    const totalCost = inputtedSize + inputtedCrust + inputtedToppings;
-    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedCheese, inputtedToppings);
-    let userCost = new Cost(inputtedSize);  //this was from Brooke mtg
+    const inputtedSize = $("input:radio[name='pizza-size']:checked").attr("id");
+    const inputtedCrust = $("input:radio[name='pizza-crust']:checked").attr("id");
+    const inputtedSauce = $("input:radio[name='pizza-sauce']:checked").attr("id");
+    const inputtedMeat = $("input:checkbox[name='pizza-meat']:checked").attr("id");
+    const inputtedVeg = $("input:checkbox[name='pizza-veg']:checked").attr("id");
+    // const totalCost = inputtedSize + inputtedCrust + inputtedToppings;
+    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg);
+    let displayPizzaDetails = displayPizzaDetails(newDreamPizza);
+    let userCost = new displayCostDetails(inputtedSize);  //this was from Brooke mtg
     newDreamPizza.displayPizzaDetails(newDreamPizza);
-    userCost.Cost(totalCost);    //this was from Brooke mtg
+    userCost.displayCostDetails();    //this was from Brooke mtg //() unknown
     console.log(newDreamPizza.buildPizza());
     console.log(userCost.Cost);
     $("#dream-pizza-show").show();
     $('#pizza-builder').hide();
     $('#order-instructions').hide();
 
-    //Dream Pizza UI
+    //Refresh Dream Pizza UI
     $("#try-again").click(function() {
       window.location.reload();
     });

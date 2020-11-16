@@ -29,7 +29,6 @@ _jQuery_
 ## Instructions 
 * _Choose your pizza size (sm, med, lg, x-lg)._
 * _Choose your crust type (regular or gluten free)._
-* _Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta)._
 * _Choose your sauce (tomato, white, garlic & olive oil, pesto)._
 * _Choose your toppings from meat and vegetarian selections._
 * _Submit your pizza selection to generate your pizza build & cost._
@@ -45,11 +44,11 @@ _jQuery_
 ### Tests
 Describe: dreamPizza
 Test: function dreamPizza()
-Expect: dreamPizza().toInclude(size, crust, sauce, cheese, toppings)
+Expect: dreamPizza().toInclude(size, crust, sauce, toppings, totalCost)
 
 Describe: buildPizza function
 Test: dreamPizza.prototype.buildPizza()
-Expect: dreamPizza.prototype.buildPizza(x size + x crust + x sauce + x cheese + x topping(s))
+Expect: dreamPizza.prototype.buildPizza(x size + x crust + x sauce + x topping(s))
 
 Describe: sizeCost
 Test: sizeCost 
