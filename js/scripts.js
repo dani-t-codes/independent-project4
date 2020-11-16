@@ -42,9 +42,12 @@ DreamPizza.prototype.addOnVegToppingsCost = function() {
 };
 
 //User Interface ------------
-function displayCostDetails(dreamPizzaToDisplay) { //belows probs not right
-  
-  return this.totalCost;
+function displayCostDetails(dreamPizzaToDisplay) { 
+  DreamPizza.sizeCost;
+  DreamPizza.addOnGFCost;
+  DreamPizza.addOnMeatToppingsCost;
+  DreamPizza.addOnVegToppingsCost;
+  return this.totalCost;  //currently returns NaN
 }
 // dreamPizza.html(this.totalCost.sizeCost.addOnGFCost.addOnToppingsCost); //as is does not work to combine all the fxns
 
@@ -66,7 +69,8 @@ $(document).ready(function() {
     const inputtedSauce = $("input:radio[name='pizza-sauce']:checked").attr("id");
     const inputtedMeat = $("input:checkbox[name='pizza-meat']:checked").attr("id");
     const inputtedVeg = $("input:checkbox[name='pizza-veg']:checked").attr("id");
-    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg, this.totalCost);
+    const basePrice = +0;
+    let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg, basePrice);
     console.log(newDreamPizza);
     // $("#pizza-build").append(newDreamPizza);
 
