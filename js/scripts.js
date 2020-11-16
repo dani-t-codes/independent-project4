@@ -28,6 +28,7 @@ DreamPizza.prototype.addOnGFCost = function() {
   return this.totalCost;
 }
 
+
 DreamPizza.prototype.addOnToppingsCost = function() {
   let toppings = [];
   this.toppings.forEach.push(toppings);
