@@ -1,4 +1,12 @@
 //Business Logic for DreamPizza ------------
+function PizzaRolodex() {
+  this.pizzas = [];
+}
+
+PizzaRolodex.prototype.addPizza = function(dreamPizza) {
+  this.pizzas.push(dreamPizza);
+}
+
 function DreamPizza(size, crust, sauce, meatToppings, vegToppings, totalCost) {
   this.size = size;
   this.crust = crust;
@@ -6,8 +14,12 @@ function DreamPizza(size, crust, sauce, meatToppings, vegToppings, totalCost) {
   this.meatToppings = meatToppings;
   this.vegToppings = vegToppings;
   this.totalCost = totalCost += 10;
+  //this.totalCost = [];
 }
-//add todisplay fxn? see lsn 17 e.g.
+
+DreamPizza.prototype.fullPizzaDetails = function() {
+  return this.size + ' pizza with ' + this.crust + " crust, " + this.sauce + ' sauce, ' + this.meatToppings + ", and " + this.vegToppings + ".";
+}
 
 DreamPizza.prototype.sizeCost = function() {
   if (this.size === 'Medium') {
@@ -17,13 +29,14 @@ DreamPizza.prototype.sizeCost = function() {
   } else if (this.size === 'X-Large') {
     this.totalCost += 15;
   }
+  //this.totalCost.push(totalCost);
   return this.totalCost;
 };
-//above & below - do === variables need to be "strings" or naw?? // might have to tie in .val() in UI
+
 DreamPizza.prototype.addOnGFCost = function() {
   if (this.crust === 'Gluten-Free') {
     this.totalCost += 5;
-  };
+  }
   return this.totalCost;
 };
 
@@ -42,17 +55,29 @@ DreamPizza.prototype.addOnVegToppingsCost = function() {
 };
 
 //User Interface ------------
-function displayCostDetails(dreamPizzaToDisplay) { 
-  DreamPizza.sizeCost;
-  DreamPizza.addOnGFCost;
-  DreamPizza.addOnMeatToppingsCost;
-  DreamPizza.addOnVegToppingsCost;
-  return this.totalCost;  //currently returns NaN
+let dreamPizza = new DreamPizza();
+
+function displayCostDetails(dreamPizzaCostToDisplay) { 
+  let pizzaCostDisplay = $("ul#pizza-cost");
+  let htmlForPizzaCost = '';
+  dreamPizzaCostToDisplay.dreamPizza.forEach(function(DreamPizza) {
+    htmlForPizzaCost += DreamPizza.prototype.sizeCost;
+    DreamPizza.prototype.addOnGFCost;
+    DreamPizza.prototype.addOnMeatToppingsCost;
+    DreamPizza.prototype.addOnVegToppingsCost;
+    pizzaCostDisplay.html(htmlForPizzaCost); //currently returns NaN
+  });
+  console.log(displayCostDetails(dreamPizzaCostToDisplay));
 }
 // dreamPizza.html(this.totalCost.sizeCost.addOnGFCost.addOnToppingsCost); //as is does not work to combine all the fxns
 
-function displayPizzaDetails(displayUserDreamPizza) {
-
+function displayPizzaDetails(dreamPizzaDisplay) {
+  let pizzaBuildDisplay = $("ul#pizza-build");
+  let htmlForPizzaDeets = '';
+  dreamPizzaDisplay.dreamPizza.forEach(function(DreamPizza) {
+    htmlForPizzaDeets += "<li>" + DreamPizza.size + ' pizza with ' + DreamPizza.crust + " crust, " + DreamPizza.sauce + ' sauce, ' + DreamPizza.meatToppings + ", " + DreamPizza.vegToppings + "." + "</li>";
+  });
+  pizzaBuildDisplay.html(htmlForPizzaDeets);
 }
 // let userDreamPizza = $("TODO");
 // let htmlForPizzaDeets = '';
@@ -71,7 +96,8 @@ $(document).ready(function() {
     const inputtedVeg = $("input:checkbox[name='pizza-veg']:checked").attr("id");
     const basePrice = +0;
     let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg, basePrice);
-    console.log(newDreamPizza);
+    displayPizzaDetails(newDreamPizza);
+    console.log(newDreamPizza.displayCostDetails); //returns undefined
     // $("#pizza-build").append(newDreamPizza);
 
     // let displayPizzaDetails = displayPizzaDetails(newDreamPizza);
@@ -90,4 +116,4 @@ $(document).ready(function() {
     });
   });
 
-}); // closing bracket for original doc.ready(fxn)
+}); // closing bracket for original doc.ready(fxn)//
