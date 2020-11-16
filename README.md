@@ -42,9 +42,19 @@ _jQuery_
 | **Program Returns Pizza Build & Cost** | Input: "pizza toppings" "pizza crust" | Output: "here's what's on your pizza" && "here's the cost for your pizza"|
 
 ### Tests
-Describe: dreamPizza
-Test: function dreamPizza()
-Expect: dreamPizza().toInclude(size, crust, sauce, toppings, totalCost)
+Describe: PizzaRolodex()
+Expect: Creates a pizzas array to hold dreamPizza fxn items.
+
+Describe: pizzaRolodex.addPizza()
+Expect: Pushes dreamPizza keys into pizzas array.
+
+Describe: DreamPizza
+Test: function DreamPizza()
+Expect: DreamPizza().toInclude(size, crust, sauce, toppings, totalCost)
+
+Describe: fullPizzaDetails function
+Test: DreamPizza.prototype.fullPizzaDetails()
+Expect: .fullPizzaDetails().toEqual(returned values of DreamPizza in set order)
 
 Describe: buildPizza function
 Test: dreamPizza.prototype.buildPizza()
@@ -60,7 +70,13 @@ Test: sizeCost
     return cost ($20);
 } else if (size === "x-lg") {
     return cost ($25);}
-Expect: sizeCost(med).toEqual($15)
+Expect: sizeCost(med).toEqual(totalCost + $15)
+
+Describe: GFCost
+Test: if (crust ==="GF") {
+  cost += 5;
+}
+Expect.gfCost(gf).toEqual(totalCost + $5)
 
 Describe: meatCost
 Test:  if (meat:checked) {
@@ -69,22 +85,29 @@ Test:  if (meat:checked) {
       add(costofMeat1, costofMeat2)
   } else (no meat) {
     return $0;}
-Expect: meatCost(chicken, bacon).toEqual($10)
+Expect: meatCost(chicken, bacon).toEqual(totalCost + $10)
 
 Describe: vegCost
 Test:  if (veg:checked) {
     return +($1)/topping
   } else (no veg) {
     return $0;}
-Expect: vegCost(spinach, garlic, mushrooms, onion).toEqual($4)
+Expect: vegCost(spinach, garlic, mushrooms, onion).toEqual(totalCost + $4)
 
-Describe: dreamPizzaCost function
+Describe: displayCostDetails function
 Test: add(sizeCost + meatCost + vegCost);
 Expect: dreamPizzaCost('sm'+ 'chicken' + 'spinach' + 'garlic').toEqual($17)
-<!-- sauceCost & cheeseCost is not needed - included in size price !-->
 
 ## Known bugs
-_As of 3:40pm 11.6.2020, bugs galore - work in progress._
+_As of 11.16.20..._
+_.fullPizzaDetails function is not returning values, but is pulling "undefined" pizza with "undefined" crust, etc._
+_All of business logic (besides the above function) works as expected, but all cost functions are not combining as they should in UI displayCostDetails._
+_Form submits & refreshes upon clicks as expected, but pizzadetails and pizzacost are not adding to the appropriate places._
+_showPizza function might have some redundancy as to what is included in the UI form submission, but it might be a better place to DRY up and refactor the now somewhat bloated document.ready(fxn)._
+_As expected with the two display functions, their subsequent lines in the form submission UI logic (lines 104, 105, and 108) aren't logging any values._
+
+_As one note will tell you, I tried to remove "return" lines in all of the cost fxns as instructed, but it would break the code if I did so._
+_Not a bug, but just a note that there are still some comments left in the code that will be removed upon final-final resub._
 
 ### Legal, or License 
 _MIT_ Copyright (c) 2020 **_Danielle Thompson_**
