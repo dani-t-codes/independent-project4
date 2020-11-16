@@ -11,7 +11,6 @@ function DreamPizza(size, crust, sauce, toppings, totalCost) {
 //add todisplay fxn? see lsn 17 e.g.
 
 DreamPizza.prototype.sizeCost = function() {
-  //I think I need to set .Cost fxn to *update* totalCost key in DP
   if (this.size === 'Medium') {
     this.totalCost += 5;
   } else if (this.size === 'Large') {
@@ -25,16 +24,14 @@ DreamPizza.prototype.sizeCost = function() {
 DreamPizza.prototype.addOnGFCost = function() {
   if (this.crust === 'Gluten-Free') {
     this.totalCost += 5;
-  } else if (this.crust === 'Regular') {
-    this.totalCost;
-  }
+  };
   return this.totalCost;
-};
+}
 
 DreamPizza.prototype.addOnToppingsCost = function() {
   let toppings = [];
   this.toppings.forEach.push(toppings);
-  this.totalCost += this.toppings.length;
+  this.totalCost += parseInt(this.toppings.length);
 };
 
 // inputtedSize + inputtedCrust + inputtedMeat.length + inputtedVeg.length;
