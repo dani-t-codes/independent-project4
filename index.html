@@ -38,48 +38,44 @@
         </div>
         <div class="radio" id="pizza-crust">
           <p>SELECT YOUR PIZZA CRUST:</p>
-          <input type="radio" name="pizza-crust" value="Regular" checked> Regular crust.<br>
-          <input type="radio" name="pizza-crust" value="Gluten-Free"> Gluten free (+$5).<br>
+          <input type="radio" name="pizza-crust" id="Regular" checked> Regular crust.<br>
+          <input type="radio" name="pizza-crust" id="Gluten-Free"> Gluten free (+$5).<br>
         </div>
         <div class="radio" id="pizza-sauce">
           <p>SELECT YOUR PIZZA SAUCE:</p>
-          <input type="radio" name="pizza-sauce" value="Marinara" checked> Fire roasted marinara.<br>
-          <input type="radio" name="pizza-sauce" value="White-sauce"> White.<br>
-          <input type="radio" name="pizza-sauce" value="Garlic-olive-oil"> Garlic-olive oil.<br>
-          <input type="radio" name="pizza-sauce" value="Pesto"> Pesto.<br>
+          <input type="radio" name="pizza-sauce" id="Marinara" checked> Fire roasted marinara.<br>
+          <input type="radio" name="pizza-sauce" id="White-sauce"> White.<br>
+          <input type="radio" name="pizza-sauce" id="Garlic-olive-oil"> Garlic-olive oil.<br>
+          <input type="radio" name="pizza-sauce" id="Pesto"> Pesto.<br>
         </div>
         <div class="form-group" id="pizza-meat">
           <p>SELECT YOUR MEAT ( optional ) :</p>
-          <input type="checkbox" name="pizza-meat" value="Pepperoni"> Olympia Provisions Pepperoni.<br>
-          <input type="checkbox" name="pizza-meat" value="Chicken"> Thyme-rub chicken.<br>
-          <input type="checkbox" name="pizza-meat" value="Sausage"> Fennel-sausage.<br>
-          <input type="checkbox" name="pizza-meat" value="Bacon"> Revel Meat Co. Bacon.<br>
+          <input type="checkbox" name="pizza-meat" id="Pepperoni"> Olympia Provisions Pepperoni.<br>
+          <input type="checkbox" name="pizza-meat" id="Chicken"> Thyme-rub chicken.<br>
+          <input type="checkbox" name="pizza-meat" id="Sausage"> Fennel-sausage.<br>
+          <input type="checkbox" name="pizza-meat" id="Bacon"> Revel Meat Co. Bacon.<br>
         </div>
         <div class="form-group" id="pizza-veg">
           <p>SELECT YOUR TOPPINGS:</p>
-          <input type="checkbox" name="pizza-veg" value="Olives"> Olives.<br>
-          <input type="checkbox" name="pizza-veg" value="Spinach"> Spinach.<br>
-          <input type="checkbox" name="pizza-veg" value="Arugula"> Arugula.<br>
-          <input type="checkbox" name="pizza-veg" value="Garlic"> Garlic.<br>
-          <input type="checkbox" name="pizza-veg" value="Jalapeno"> Pickled jalapenos.<br>
-          <input type="checkbox" name="pizza-veg" value="Chiles"> Mama Lil's Peppers.<br>
-          <input type="checkbox" name="pizza-veg" value="Mushrooms"> Chanterelle mushrooms.<br>
-          <input type="checkbox" name="pizza-veg" value="Onion"> Carmelized onions.<br>
-          <input type="checkbox" name="pizza-veg" value="Tomato"> Heirloom tomato slices.<br>
-          <input type="checkbox" name="pizza-veg" value="Basil"> Fresh basil.<br>
+          <input type="checkbox" name="pizza-veg" id="Olives"> Olives.<br>
+          <input type="checkbox" name="pizza-veg" id="Spinach"> Spinach.<br>
+          <input type="checkbox" name="pizza-veg" id="Arugula"> Arugula.<br>
+          <input type="checkbox" name="pizza-veg" id="Garlic"> Garlic.<br>
+          <input type="checkbox" name="pizza-veg" id="Jalapeno"> Pickled jalapenos.<br>
+          <input type="checkbox" name="pizza-veg" id="Chiles"> Mama Lil's Peppers.<br>
+          <input type="checkbox" name="pizza-veg" id="Mushrooms"> Chanterelle mushrooms.<br>
+          <input type="checkbox" name="pizza-veg" id="Onion"> Carmelized onions.<br>
+          <input type="checkbox" name="pizza-veg" id="Tomato"> Heirloom tomato slices.<br>
+          <input type="checkbox" name="pizza-veg" id="Basil"> Fresh basil.<br>
         </div>
         <button type="submit" class="button" id="build">Build my dream (pizza)!</button>
       </form>
     </div>
     <span id="dream-pizza-show">
       <p><b>Your dream pizza inludes:</b></p>
-        <span id="pizza-size"></span>
-        <span id="pizza-crust"></span>
-        <span id="pizza-sauce"></span>
-        <span id="pizza-meat"></span>
-        <span id="pizza-veg"></span>
+        <p><span id="pizza-build"></span></p>
       <p><b>Your dream pizza cost will be:</b></p>
-        <span id="pizza-cost"></span>
+        <p><span id="pizza-cost"></span></p>
       <button type="submit" class="button" id="try-again">Try again!</button>
     </span>
   </div>

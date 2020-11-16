@@ -5,8 +5,6 @@ function DreamPizza(size, crust, sauce, toppings, totalCost) {
   this.sauce = sauce;
   this.toppings = toppings;
   this.totalCost = totalCost += 10;
-  //should I set original value to 0 then construct w/ .Cost fxn? 
-  //^ yes, see lsn 9
 }
 //add todisplay fxn? see lsn 17 e.g.
 
@@ -20,7 +18,7 @@ DreamPizza.prototype.sizeCost = function() {
   }
   return this.totalCost;
 };
-//above & below - do === variables need to be "strings" or naw??
+//above & below - do === variables need to be "strings" or naw?? // might have to tie in .val() in UI
 DreamPizza.prototype.addOnGFCost = function() {
   if (this.crust === 'Gluten-Free') {
     this.totalCost += 5;
@@ -35,22 +33,22 @@ DreamPizza.prototype.addOnToppingsCost = function() {
   return this.totalCost;
 };
 
-// inputtedSize + inputtedCrust + inputtedMeat.length + inputtedVeg.length;
-//**Need a connector for three cost prototypes**//
-
 //User Interface ------------
-function displayPizzaDetails(displayUserDreamPizza) {
-  let userDreamPizza = $("TODO");
-  let htmlForPizzaDeets = '';
-  displayPizzaDetails.forEach(function(userDreamPizza) {
-    userDreamPizza.concat(userDreamPizza.size + " pizza with " + DreamPizza.crust + " crust, " + DreamPizza.sauce + " sauce, " + DreamPizza.cheese + ", and " + DreamPizza.toppings); //lsn23 cheat sheet
-  });
-  userDreamPizza.html(htmlForPizzaDeets);
+function displayCostDetails(dreamPizzaToDisplay) { //belows probs not right
+  
+  return this.totalCost;
 }
+// dreamPizza.html(this.totalCost.sizeCost.addOnGFCost.addOnToppingsCost); //as is does not work to combine all the fxns
 
-function displayCostDetails(buildCost) { //belows probs not right
-  buildCost.html(this.totalCost.sizeCost.addOnGFCost.addOnToppingsCost.length);
+function displayPizzaDetails(displayUserDreamPizza) {
+
 }
+// let userDreamPizza = $("TODO");
+// let htmlForPizzaDeets = '';
+// displayPizzaDetails.forEach(function(userDreamPizza) {
+//   userDreamPizza.concat(userDreamPizza.size + " pizza with " + DreamPizza.crust + " crust, " + DreamPizza.sauce + " sauce, " + DreamPizza.cheese + ", and " + DreamPizza.toppings); //lsn23 cheat sheet
+// });
+// userDreamPizza.html(htmlForPizzaDeets);
 
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
@@ -60,14 +58,17 @@ $(document).ready(function() {
     const inputtedSauce = $("input:radio[name='pizza-sauce']:checked").attr("id");
     const inputtedMeat = $("input:checkbox[name='pizza-meat']:checked").attr("id");
     const inputtedVeg = $("input:checkbox[name='pizza-veg']:checked").attr("id");
-    // const totalCost = inputtedSize + inputtedCrust + inputtedToppings;
+    const totalCost = 0;
     let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg);
-    let displayPizzaDetails = displayPizzaDetails(newDreamPizza);
-    let userCost = new displayCostDetails(inputtedSize);  //this was from Brooke mtg
-    newDreamPizza.displayPizzaDetails(newDreamPizza);
-    userCost.displayCostDetails();    //this was from Brooke mtg //() unknown
-    console.log(newDreamPizza.buildPizza());
-    console.log(userCost.Cost);
+    console.log(newDreamPizza);
+    // $("#pizza-build").append(newDreamPizza);
+
+    // let displayPizzaDetails = displayPizzaDetails(newDreamPizza);
+    // let userCost = new displayCostDetails(inputtedSize);  //this was from Brooke mtg
+    // newDreamPizza.displayPizzaDetails(newDreamPizza);
+    // userCost.displayCostDetails();    //this was from Brooke mtg //() unknown
+    // console.log(newDreamPizza.buildPizza());
+    // console.log(userCost.Cost);
     $("#dream-pizza-show").show();
     $('#pizza-builder').hide();
     $('#order-instructions').hide();
