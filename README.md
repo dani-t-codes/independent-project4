@@ -13,9 +13,9 @@ _This independent project during week 4 of Epicodus is an exercise in object-ori
 _{#F29829}, {#A64F03}, {#700B19}, {#401A0C}, {#F2F2F2}._
 
 ## Technologies used
-_Javascript_
-_Bootstrap_
-_jQuery_
+* Javascript
+* Bootstrap
+* jQuery
 
 ## Installation requirements
 * _For Mac users, find Terminal in your Finder, and open a new window. Install the package manager, (Homebrew) [https://brew.sh/], on your device by entering this line of code in Terminal: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`._
@@ -27,11 +27,11 @@ _jQuery_
 * _Read through the home page, and follow the order instructions below._
 
 ## Instructions 
-* _Choose your pizza size (sm, med, lg, x-lg)._
-* _Choose your crust type (regular or gluten free)._
-* _Choose your sauce (tomato, white, garlic & olive oil, pesto)._
-* _Choose your toppings from meat and vegetarian selections._
-* _Submit your pizza selection to generate your pizza build & cost._
+* Choose your pizza size (sm, med, lg, x-lg).
+* Choose your crust type (regular or gluten free).
+* Choose your sauce (tomato, white, garlic & olive oil, pesto).
+* Choose your toppings from meat and vegetarian selections.
+* Submit your pizza selection to generate your pizza build & cost.
 
 ### Specs
 | Spec | Input | Output |
