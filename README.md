@@ -68,9 +68,11 @@ cost += 5;}
 Expect.gfCost(gf).toEqual(totalCost + $5)
 
 ## Stretch Goals
-Looking to the future, there are some additional functions I would like to build out in this project, including changing meat and veggie toppings to checkboxes instead of radio buttons. In order to do so, I would need to pull the checkbox data from the DOM upon form submission, send the data through a loop to retrieve all occurences of checked toppings, and have a calculation in the UI logic that would total up the number of meat and veggie topping occurences from the DOM and multiply by the set price per number of toppings. There is some testing below that might inform at least desired input and desired output for such functionality. These additional loops would definitely require some refactoring to reduce bloating in the user interface logic. 
+Looking to the future, there are some additional functions I would like to build out in this project, including changing meat and veggie toppings to checkboxes instead of radio buttons. In order to do so, I would need to pull the checkbox data from the DOM upon form submission, send the data through a loop to retrieve all occurrences of checked toppings, and have a calculation in the UI logic that would total up the number of meat and veggie topping occurrences from the DOM and multiply by the set price per number of toppings. There is some testing below that might inform at least desired input and desired output for such functionality. These additional loops would definitely require some refactoring to reduce bloating in the user interface logic. 
 
 Additionally, I might also consider adding a "Pizza Rolodex" to enter multiple pizzas into the DOM and store multiple pizzas at once. This could lend itself to a user "purchasing" multiple pizzas at one time, storing pre-defined pizzas the user could select from, and so forth. 
+
+Finally, I would want to ensure that the meat section was optional, and that the user did not have to make a meat selection if they didn't want to. (Previously, when I had checkboxes in all toppings values, the selection would return an error if the user had not selected a meat.)
 
 ## Stretch Tests
 Describe: PizzaRolodex()

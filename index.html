@@ -20,7 +20,6 @@
         <ol> 
           <li>Choose your pizza size (sm, med, lg, x-lg).</li>
           <li>Choose your crust type (regular or gluten free).</li>
-          <li>Choose your cheese/chz (mozzarella, vegan mozz, fontina, feta).</li>
           <li>Choose your sauce (tomato, white, garlic & olive oil, pesto).</li>
           <li>Choose your toppings from meat and vegetarian selections.</li>
           <li>Submit your pizza selection to generate your pizza cost.</li>
@@ -29,45 +28,43 @@
       <form id="pizza-builder">
         <div class="radio" id="pizza-size">
           <p>SELECT YOUR PIZZA SIZE:</p>
-          <label>
-          <input type="radio" name="pizza-size" id="Small" checked> Small (6 slices).<br>
-          <input type="radio" name="pizza-size" id="Medium"> Medium (8 slices).<br>
-          <input type="radio" name="pizza-size" id="Large"> Large (10 slices).<br>
-          <input type="radio" name="pizza-size" id="X-large"> X-large (12 slices).<br>
-          </label>
+          <label><input type="radio" name="pizza-size" id="Small" checked> Small (6 slices).</label><br>
+          <label><input type="radio" name="pizza-size" id="Medium"> Medium (8 slices).</label><br>
+          <label><input type="radio" name="pizza-size" id="Large"> Large (10 slices).</label><br>
+          <label><input type="radio" name="pizza-size" id="X-large"> X-large (12 slices).</label><br>
         </div>
         <div class="radio" id="pizza-crust">
           <p>SELECT YOUR PIZZA CRUST:</p>
-          <input type="radio" name="pizza-crust" id="Regular" checked> Regular crust.<br>
-          <input type="radio" name="pizza-crust" id="Gluten-Free"> Gluten free (+$5).<br>
+          <label><input type="radio" name="pizza-crust" id="Regular" checked> Regular crust.</label><br>
+          <label><input type="radio" name="pizza-crust" id="Gluten-Free"> Gluten free (+$5).</label><br>
         </div>
         <div class="radio" id="pizza-sauce">
           <p>SELECT YOUR PIZZA SAUCE:</p>
-          <input type="radio" name="pizza-sauce" id="Marinara" checked> Fire roasted marinara.<br>
-          <input type="radio" name="pizza-sauce" id="White-sauce"> White.<br>
-          <input type="radio" name="pizza-sauce" id="Garlic-olive-oil"> Garlic-olive oil.<br>
-          <input type="radio" name="pizza-sauce" id="Pesto"> Pesto.<br>
+          <label><input type="radio" name="pizza-sauce" id="Marinara" checked> Fire roasted marinara.</label><br>
+          <label><input type="radio" name="pizza-sauce" id="White-sauce"> White.</label><br>
+          <label><input type="radio" name="pizza-sauce" id="Garlic-olive-oil"> Garlic-olive oil.</label><br>
+          <label><input type="radio" name="pizza-sauce" id="Pesto"> Pesto.</label><br>
         </div>
         <div class="form-group" id="pizza-meat">
-          <p>SELECT YOUR MEAT ( optional ) :</p>
-          <input type="radio" name="pizza-meat" id="Pepperoni" checked> Olympia Provisions Pepperoni.<br>
-          <input type="radio" name="pizza-meat" id="Chicken"> Thyme-rub chicken.<br>
-          <input type="radio" name="pizza-meat" id="Sausage"> Fennel-sausage.<br>
-          <input type="radio" name="pizza-meat" id="Bacon"> Revel Meat Co. Bacon.<br>
-          <input type="radio" name="pizza-meat" id="Soy-curls"> Soy Curls.<br>
+          <p>SELECT YOUR MEAT:</p>
+          <label><input type="radio" name="pizza-meat" id="Pepperoni" checked> Olympia Provisions Pepperoni.</label><br>
+          <label><input type="radio" name="pizza-meat" id="Chicken"> Thyme-rub chicken.</label><br>
+          <label><input type="radio" name="pizza-meat" id="Sausage"> Fennel-sausage.</label><br>
+          <label><input type="radio" name="pizza-meat" id="Bacon"> Revel Meat Co. Bacon.</label><br>
+          <label><input type="radio" name="pizza-meat" id="Soy-curls"> Soy Curls.</label><br>
         </div>
         <div class="form-group" id="pizza-veg">
           <p>SELECT YOUR TOPPINGS:</p>
-          <input type="radio" name="pizza-veg" id="Mushrooms" checked> Chanterelle mushrooms.<br>
-          <input type="radio" name="pizza-veg" id="Olives"> Olives.<br>
-          <input type="radio" name="pizza-veg" id="Spinach"> Spinach.<br>
-          <input type="radio" name="pizza-veg" id="Arugula"> Arugula.<br>
-          <input type="radio" name="pizza-veg" id="Garlic"> Garlic.<br>
-          <input type="radio" name="pizza-veg" id="Jalapeno"> Pickled jalapenos.<br>
-          <input type="radio" name="pizza-veg" id="Chiles"> Mama Lil's Peppers.<br>
-          <input type="radio" name="pizza-veg" id="Onion"> Carmelized onions.<br>
-          <input type="radio" name="pizza-veg" id="Tomato"> Heirloom tomato slices.<br>
-          <input type="radio" name="pizza-veg" id="Basil"> Fresh basil.<br>
+          <label><input type="radio" name="pizza-veg" id="Mushrooms" checked> Chanterelle mushrooms.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Olives"> Olives.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Spinach"> Spinach.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Arugula"> Arugula.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Garlic"> Garlic.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Jalapeno"> Pickled jalapenos.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Chiles"> Mama Lil's Peppers.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Onion"> Carmelized onions.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Tomato"> Heirloom tomato slices.</label><br>
+          <label><input type="radio" name="pizza-veg" id="Basil"> Fresh basil.</label><br>
         </div>
         <button type="submit" class="button" id="build">Build my dream (pizza)!</button>
       </form>
