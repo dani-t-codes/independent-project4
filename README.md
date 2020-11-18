@@ -5,12 +5,10 @@
 #### By Danielle Thompson
 
 ## Description
-_Love pizza? So do I! Use this website to build your dream (virtual) pizza and get that mouth salivating in the process. Gluten free? Vegan? Don't worry - we have (virtual) items that will meet all your dietary needs! Choose your pizza size and individual toppings to see how much the pizza of your dreams will cost._
+Love pizza? So do I! Use this website to build your dream (virtual) pizza and get that mouth salivating in the process. Gluten free? Vegan? Don't worry - we have (virtual) items that will meet all your dietary needs! Choose your pizza size and individual toppings to see how much the pizza of your dreams will cost.
 
-_This independent project during week 4 of Epicodus is an exercise in object-oriented Javascript, test-driven development, and ensuring at least a minimum viable project is in place._
+This independent project during week 4 of Epicodus is an exercise in object-oriented Javascript, test-driven development, and ensuring at least a minimum viable project is in place.
 
-## Color Theme
-_{#F29829}, {#A64F03}, {#700B19}, {#401A0C}, {#F2F2F2}._
 
 ## Technologies used
 * Javascript
@@ -102,6 +100,9 @@ Expect: vegCost(spinach, garlic, mushrooms, onion).toEqual(totalCost + $4)
 Describe: displayCostDetails function (in UI, but above doc.ready)
 Test: add(sizeCost + meatCost + vegCost);
 Expect: dreamPizzaCost('sm'+ 'chicken' + 'spinach' + 'garlic').toEqual($17)
+
+## Color Theme
+_{#F29829}, {#A64F03}, {#700B19}, {#401A0C}, {#F2F2F2}._
 
 ## Known bugs
 _None to report at this time._ 
