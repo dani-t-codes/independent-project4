@@ -9,7 +9,6 @@ Love pizza? So do I! Use this website to build your dream (virtual) pizza and ge
 
 This independent project during week 4 of Epicodus is an exercise in object-oriented Javascript, test-driven development, and ensuring at least a minimum viable project is in place.
 
-
 ## Technologies used
 * Javascript
 * Bootstrap
