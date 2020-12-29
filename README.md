@@ -15,6 +15,8 @@ This independent project during week 4 of Epicodus is an exercise in object-orie
 * jQuery
 
 ## Installation requirements
+Access the live project at https://dani-t-codes.github.io/independent-project4, or follow the instructions below to clone the project to your local computer.
+
 * _For Mac users, find Terminal in your Finder, and open a new window. Install the package manager, [Homebrew](https://brew.sh/), on your device by entering this line of code in Terminal: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`._
 * _Once homebrew is installed, install Git, a version control system for code writers, with this line of code `brew install git`._
 
