@@ -40,7 +40,7 @@ $(document).ready(function() {
     let newDreamPizza = new DreamPizza(inputtedSize, inputtedCrust, inputtedSauce, inputtedMeat, inputtedVeg);
     newDreamPizza.sizeCost();
     newDreamPizza.addOnGFCost();
-    $("#pizza-build").html(newDreamPizza.fullPizzaDetails())
+    $("#pizza-build").html(newDreamPizza.fullPizzaDetails());
     $("#pizza-cost").html('$' + newDreamPizza.totalCost);
     $("#dream-pizza-show").show(); 
     $('#pizza-builder').hide(); 
